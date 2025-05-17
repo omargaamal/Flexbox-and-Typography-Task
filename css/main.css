@@ -1,49 +1,140 @@
-/* الخط العام والخلفية */
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* تنسيق العناوين */
-  h1, h2 {
-    color: #2c3e50;
-    font-size: 28px;
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  /* تنسيق المقالات */
-  article {
-      text-align: center;
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-  
-  /* الفقرات داخل المقالات */
-  article p {
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 15px;
+/* Google Font */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+/* Navigation Bar - Flexbox */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  background-color: #444;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+article {
+  text-align: center;
+background-color: #ffffff;
+padding: 20px;
+margin: 20px auto;
+max-width: 800px;
+border: 1px solid #ccc;
+border-radius: 6px;
+}
+
+/* الفقرات داخل المقالات */
+article p {
+line-height: 1.6;
+color: #555;
+margin-bottom: 15px;
+}
+
+.blog-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+
+.blog-list {
+  flex: 1 1 250px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+
+.blog-content {
+  flex: 2 1 600px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+ul, ol{
+  list-style: none;
+}
+
+h1, h2 {
+  text-align: center;
+  line-height: 1.4;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p, li, address, time {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+  margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+  .blog-container {
+    flex-direction: column;
   }
 
-  ol,ul{
-      list-style: none;
+  nav ul {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* وصف التدوينة */
-  .blog-description {
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: #666;
-  }
-  
+}
